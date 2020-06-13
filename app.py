@@ -58,7 +58,7 @@ def main():
 
         data.REWARD.replace(to_replace = {'NO REWARD':0,'BEST OPERATOR':1,'MOST IMPROVED':2,'QUICK LEARNER':3}, inplace = True)
         data.AMBASSADOR.replace(to_replace = {0:'NA','5S':1,'EMS':2,'VISION':3,'BEST OPERATOR':4,'CANTEEN COMMITTEE MEMBER':5,'RFT AMMABASSADOR':6,'WORKS COMMITTEE MEMBER':7}, inplace = True)
-        data.AMBASSADOR.replace((to_replace = {'NA':0}, inplace = True)
+        data.AMBASSADOR.replace(to_replace = {'NA':0}, inplace = True)
         EMPNO = data.EMPNO
         EMPNAME = data.NAME
         EMPST=data.STATUS
