@@ -57,8 +57,8 @@ def main():
         data.LOAN_RANGE.replace(to_replace = {'NO LOAN':0,'LESS THAN 2000':1,'BET 2000-4000':2, 'BET 4000-6000':3,'BET 6000-8000':4,'BET 8000-10000':5,'BET 10000-15000':6,'BET 15000-20000':7,'MORE THAN 20000':8}, inplace = True)
 
         data.REWARD.replace(to_replace = {'NO REWARD':0,'BEST OPERATOR':1,'MOST IMPROVED':2,'QUICK LEARNER':3}, inplace = True)
-        data.AMBASSADOR.astype(object)
-        data.AMBASSADOR.replace(to_replace = {'5S':1,'EMS':2,'VISION':3,'BEST OPERATOR':4,'CANTEEN COMMITTEE MEMBER':5,'RFT AMMABASSADOR':6,'WORKS COMMITTEE MEMBER':7}, inplace = True)
+        if(set(data.AMBASSADOR.unique()) != {0}):
+            data.AMBASSADOR.replace(to_replace = {'5S':1,'EMS':2,'VISION':3,'BEST OPERATOR':4,'CANTEEN COMMITTEE MEMBER':5,'RFT AMMABASSADOR':6,'WORKS COMMITTEE MEMBER':7}, inplace = True)
         EMPNO = data.EMPNO
         EMPNAME = data.NAME
         EMPST=data.STATUS
